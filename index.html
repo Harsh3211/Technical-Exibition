@@ -6,9 +6,9 @@
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <meta content="" name="keywords">
   <meta content="" name="description">
-
+  <link rel = "icon" href = "img/favicon-16x16.png">
   <!-- Favicons -->
-  <link href="img/favicon.png" rel="icon">
+  <!-- <link href="img/favicon.png" rel="icon"> -->
   <link href="img/apple-touch-icon.png" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
@@ -27,12 +27,31 @@
 
   <!-- Main Stylesheet File -->
   <link href="css/style.css" rel="stylesheet">
-
-
+  <link rel = "stylesheet" href = "css/loader.css">
 </head>
 
 <body>
+  <!--     LOADER    -->
 
+
+   <div id = "loader">
+          <img id = "load_img" src = "img/new.png">
+          <!--<img id = "loading" src = "sources/loader.gif">-->
+          <video  id = "loading" autoplay = "autoplay" muted = "muted" loop = "loop" poster = "img/load.png" playsinline="playsinline"
+          style="height:190%; width : 100% ; z-index:-1; position: absolute;left:50%;transform: translateX(-50%);">
+          <source src = "img/loader.mp4" type = "video/mp4">
+
+          </video>
+          <div id = "info">
+           <p id = "random"> YOUR FOMO IS GOING TO BE OVER...</p>
+          </div>
+        </div>
+      <script type="text/javascript">
+          var statements = ["CLICK TO EXPLORE THE GAME OF TECHNO-PANORAMA","Technology is a word that describes something that doesn’t work yet. - Douglas Adams"," The art challenges the technology, and the technology inspires the art. - John Lasseter","Any sufficiently advanced technology is equivalent to magic. - Arthur C. Clarke ","Just because something doesn’t do what you planned it to do doesn’t mean it’s useless. - Thomas Edison","One machine can do the work of fifty ordinary men.  No machine can do the work of one extraordinary man. - Elbert Hubbard","Science and technology revolutionize our lives, but memory, tradition and myth frame our response. - Arthur Schlesinger "];
+          var i = Math.round(Math.random()*6);
+          document.getElementById("random").innerHTML =statements[4];
+        </script>
+  <!-------------------------------->
   <!--==========================
   Header
   ============================-->
@@ -455,7 +474,7 @@
   <div id="preloader"></div>
 
   <!-- JavaScript Libraries -->
-  <script src="lib/jquery/jquery.min.js"></script>
+  <!--<script src="lib/jquery/jquery.min.js"></script>-->
   <script src="lib/jquery/jquery-migrate.min.js"></script>
   <script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="lib/easing/easing.min.js"></script>
@@ -471,6 +490,12 @@
 
   <!-- Template Main Javascript File -->
   <script src="js/main.js"></script>
-
+  <script src="js/jquery.js"></script>
+  <script>
+  $(window).load(function(){
+     $('#loader').delay(3000).fadeOut("medium");
+     });
+    //window.onload = function(){ document.getElementById("loader").style.display = "none";
+ </script>
 </body>
 </html>

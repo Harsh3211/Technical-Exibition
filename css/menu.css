@@ -1,0 +1,319 @@
+:root{
+  --menu-speed: 0.75s;
+}
+
+.menu-wrap {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2;
+  }
+
+  .menu-wrap .toggler {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    cursor: pointer;
+    width: 55px;
+    height: 55px;
+    opacity: 0;
+
+  }
+  
+  .menu-wrap .hamburger {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 60px;
+    height: 60px;
+    padding: 1rem;
+    background:transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center ; 
+  }
+  
+  /* Hamburger Line */
+  .menu-wrap .hamburger > div {
+    position: relative;
+    flex: none;
+    width: 120%;
+    height: 3px;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.4s ease;
+  }
+  
+  /* Hamburger Lines - Top & Bottom */
+  .menu-wrap .hamburger > div::before,
+  .menu-wrap .hamburger > div::after {
+    content: '';
+    position: absolute;
+    z-index: 1;
+    top: -10px;
+    width: 100%;
+    height: 3px;
+    background: inherit;
+  }
+  
+  /* Moves Line Down */
+  .menu-wrap .hamburger > div::after {
+    top: 10px;
+  }
+.menu-wrap .toggler:checked,
+.menu-wrap .toggler:checked + .hamburger{
+    left : 65%;
+    transition-duration: var(--menu-speed);
+    
+    }
+
+  /* Toggler Animation */
+  .menu-wrap .toggler:checked + .hamburger > div {
+      transform: rotate(135deg);
+  }
+  
+  /* Turns Lines Into X */
+  .menu-wrap .toggler:checked + .hamburger > div:before,
+  .menu-wrap .toggler:checked + .hamburger > div:after {
+    top: 0;
+    transform: rotate(90deg);
+    
+  }
+  
+  /* Rotate On Hover When Checked */
+  .menu-wrap .toggler:checked:hover + .hamburger > div {
+    transform: rotate(225deg);
+  }
+  
+  /* Show Menu */
+  .menu-wrap .toggler:checked ~ .menu {
+    visibility: visible;
+  } 
+  
+  .menu-wrap .toggler:checked ~ .menu > div {
+    transform: translateX(0%);
+    transition-duration: var(--menu-speed);
+  }
+  
+  .menu-wrap .toggler:checked ~ .menu > div > div {
+    opacity: 1;
+    transition:  opacity 0.4s ease 0.4s;
+  }
+  
+  .menu-wrap .menu {
+    position: relative;
+    top: 0px;
+    left : 0px;
+    visibility: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: -moz-scrollbars-none;
+    -ms-overflow-style: none;
+  }
+
+  .menu-wrap .menu > div {
+    
+    background:black;
+    width: 18vw;
+    height: 100vh;  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translateX(-100%);
+    transition: all 0.4s ease;
+    overflow: scroll;   /*here the contents should scroll if they overflow */
+    overflow-x: hidden;
+    scrollbar-color: cyan transparent;
+    scrollbar-width: thin;
+
+  }
+.menu-wrap .menu > div::-webkit-scrollbar{
+    width: 4.5px;
+    background-color: transparent;
+}
+.menu-wrap .menu > div::-webkit-scrollbar-thumb{
+    background-color: cyan;
+    
+}
+.menu-wrap .menu > div::-webkit-scrollbar-track{
+     -webkit-box-shadow: inset 0 0 6px rgba(50,50,60,0);
+    background-color: transparent;
+   
+}
+
+  /*
+.menu-wrap .menu ::-webkit-scrollbar { 
+       width: 0 !important;
+}
+*/
+   
+  .menu-wrap .menu > div:hover{
+    background:rgb(0, 0, 0);
+  }
+  
+  .menu-wrap .menu > div > div {
+    position: relative;
+    top : 8%;
+    text-align: center;
+    justify-content: center;
+    width: 15vw;
+    height: 100vh;  
+    opacity: 1;
+    transition: opacity 0.4s ease;
+  }
+  
+  .menu-wrap .menu > div > div > ul > li {
+    list-style: none;
+    color :gray;
+    font-size: 1.2rem;
+    font-family: sans-serif;
+    padding: 0.5rem;
+    cursor: default;
+      
+  }
+  .menu-wrap .menu > div > div > ul > li > a {
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.2s ease;
+    
+    cursor: pointer;
+	}
+    .menu-wrap .menu > div > div > ul > li > a:hover {
+    color : aqua;
+	}
+  
+  #ms {
+    width: 65px;
+    height: 65px;
+    cursor: default;
+}
+
+  #new{
+    position:relative;
+    top : 8px;
+    transition: all 0.4s ease;
+    cursor: default;
+  }
+
+
+#social{
+  display: inline-block;
+}
+.fa {
+  padding: 10px;
+  margin:3px;
+  font-size: 30px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+}
+
+.fa-facebook{
+  background:black;
+  opacity: 0.8;
+  color:#3B5998;
+  border-radius: 7px;
+  cursor: pointer;
+  border : 1.5px solid #3B5998;
+}
+.fa-twitter {
+  background:black;
+  opacity: 0.8;
+  color:#55ACEE;
+  border-radius: 7px;
+  cursor: pointer;
+  border : 1.5px solid #55ACEE;
+}
+.fa-instagram {
+  background:black;
+  opacity: 0.8;
+  color:rgb(221, 76, 235);
+  border-radius: 7px;
+  cursor: pointer;
+  border : 1.5px solid rgb(221, 76, 235);
+}
+
+.fa-facebook:hover{
+  background:#3B5998;
+  color:white;
+  border-radius: 7px;
+  cursor: pointer;
+  box-shadow: 2.5px 2.5px 2.5px gray;
+}
+.fa-twitter:hover {
+  background: #55ACEE;
+  color: white;
+  border-radius: 7px;
+  cursor: pointer;
+  box-shadow: 2.5px 2.5px 2.5px gray;
+}
+.fa-instagram:hover {
+  background: rgb(221, 76, 235) ;
+  color: white;
+  border-radius: 7px;
+  cursor: pointer;
+  box-shadow: 2.5px 2.5px 2.5px gray;
+}
+
+@media only screen and (max-width : 960px){
+    
+  
+    .menu-wrap .menu > div
+    
+    {
+         
+    width: 60vw;
+    height: 110vh;  
+  
+
+                            
+    }
+    .menu-wrap .menu > div >div
+    
+    {
+    width: 60vw;
+    height:130vh;
+                            
+    }
+    .menu-wrap .menu > div > div > ul > li {
+           font-size:1.35em;
+      margin:0px;
+      padding:0.35rem;
+        
+    }
+    /*
+      .menu-wrap .menu > div
+    {
+         
+    width: 60vw;
+    height: 100vh;  
+  
+
+                            
+    }
+    .menu-wrap .menu > div >div
+    
+    {
+    width: 60vw;
+    height:100vh;
+                            
+    }
+    .menu-wrap .menu > div > div > ul > li {
+      margin:0px;
+      padding:0.25rem;
+        
+    }*/
+    .fa {
+      padding: 10px;
+      margin:3px;
+      font-size: 20px;
+      width: 40px;
+      text-align: center;
+      text-decoration: none;
+    }   
+}
