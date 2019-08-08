@@ -5,6 +5,7 @@
     width:100%;
     height:100%;
     z-index: 9997;
+
 }
 #loading{
     position: absolute;
@@ -29,12 +30,14 @@
     font-size: 200%;
     text-align: center;
     font-family: sans-serif;
+    padding-left: 20%;
+    padding-right: 20%;
 }
 @media only screen and (max-width :960px){
      #loading{
         height: 200vh !important;
         width:400vw !important;
-        top:-65% ;
+        top:-55% ;
         left:-150%;
     }
     #info{
@@ -42,6 +45,8 @@
         left:0;
         color: #37bdcf;
         font-size: 140%;
+        padding-left: 5%;
+        padding-right: 5%;
     }
     #load_img{
     transform: scale(0.6);
