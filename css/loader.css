@@ -35,9 +35,9 @@
 }
 @media only screen and (max-width :960px){
      #loading{
-        height: 200vh !important;
+        height: 180vh !important;
         width:400vw !important;
-        top:-63% ;
+        top:-60% ;
         left:-150%;
     }
     #info{
