@@ -34,11 +34,13 @@
 }
 @media only screen and (max-width :960px){
      #loading{
-        height: 200% ;
-        width:200% ;
+        height: 220vh !important;
+        width:400vw !important;
+        top:-65% ;
+        left:-150%;
     }
     #info{
-        top:20rem;
+        top:70vh;
         left:0;
         color: #37bdcf;
         font-size: 130%;
