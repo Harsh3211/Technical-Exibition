@@ -3,12 +3,12 @@
     top:0%;
     background: black;
     width:100%;
-    height:100%;
+    height:125%;
     z-index: 9997;
 }
 #loading{
     position: absolute;
-    top:-60%;
+    top:-64%;
     left:-25%;
     z-index: 9998;
 }
@@ -21,9 +21,9 @@
 #info{
     position: absolute;
     z-index :9999;
-    width:100vw;
-    height:20vh;
-    top:75vh;
+    width:100%;
+    height:25%;
+    top:60%;
     left:0;
     color: #37bdcf;
     font-size: 200%;
@@ -34,22 +34,22 @@
 }
 @media only screen and (max-width :960px){
      #loading{
-        height: 200vh !important;
-        width:400vw !important;
-        top:-65% ;
+        height:150% !important;
+        width:400% !important;
+        top:-50% ;
         left:-150%;
     }
     #info{
-        top:70vh;
+        top:55%;
         left:0;
         color: #37bdcf;
-        font-size: 150%;
+        font-size: 140%;
         padding-left: 5%;
         padding-right: 5%;
     }
     #load_img{
     transform: scale(0.6);
-    left : 25%;
+    left : 21%;
     position: relative;
     z-index :9999;
 }
