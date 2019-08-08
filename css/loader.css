@@ -34,7 +34,7 @@
 }
 @media only screen and (max-width :960px){
      #loading{
-        height:150% !important;
+        height:130% !important;
         width:400% !important;
         top:-60% ;
         left:-150%;
